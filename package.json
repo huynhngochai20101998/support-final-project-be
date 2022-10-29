@@ -1,0 +1,62 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Build Ecommerce Application",
+  "main": "server/index.js",
+  "scripts": {
+    "build": "npm run build:clean && cross-env NODE_ENV=production",
+    "build:clean": "rimraf ./dist",
+    "start": "cross-env NODE_ENV=development nodemon server",
+    "start:prod": "cross-env NODE_ENV=production node server",
+    "start:production": "npm run build && npm run start:prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongoose"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.1120.0",
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.30.0",
+    "compression": "^1.7.4",
+    "connect-history-api-fallback": "^1.6.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10",
+    "mongoose-slug-generator": "^1.0.4",
+    "multer": "^1.4.4",
+    "passport": "^0.5.2",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-jwt": "^4.0.0",
+    "paypal-rest-sdk": "^1.8.1",
+    "session-storage": "^1.0.1"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "copy-webpack-plugin": "^10.2.4",
+    "cross-env": "^7.0.3",
+    "dotenv-webpack": "^7.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-pwa-manifest": "^4.3.0"
+  }
+}
